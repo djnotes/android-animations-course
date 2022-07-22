@@ -3,6 +3,7 @@ package com.example.viewanimation
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.animation.*
 import com.example.viewanimation.databinding.ActivityMainBinding
 
@@ -24,6 +25,23 @@ class MainActivity : AppCompatActivity() {
         binding.start.setOnClickListener {button->
             val myResAnimSet = AnimationUtils.loadAnimation(this, R.anim.my_anim)
 
+            myResAnimSet.setAnimationListener(object: Animation.AnimationListener{
+                override fun onAnimationStart(p0: Animation?) {
+                    Log.d("MainActivity", "onAnimationStart: ")
+                }
+
+                override fun onAnimationEnd(p0: Animation?) {
+                    Log.d("MainActivity", "onAnimationEnd: button animation finished")
+                    val intent = Intent(applicationContext, SecondActivity::class.java)
+                    startActivity(intent)
+                    overridePendingTransition(R.anim.slide_right_in, R.anim.slide_left_out)
+                }
+
+                override fun onAnimationRepeat(p0: Animation?) {
+                    Log.d("MainActivity", "onAnimationRepeat: ")
+                }
+
+            })
             button.startAnimation(myResAnimSet)
 //            val myAnimationSet = AnimationSet(true)
 //            myAnimationSet.duration = 3000
