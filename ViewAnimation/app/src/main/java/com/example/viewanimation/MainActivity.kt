@@ -1,6 +1,7 @@
 package com.example.viewanimation
 
 import android.content.Intent
+import android.graphics.drawable.Animatable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -43,6 +44,13 @@ class MainActivity : AppCompatActivity() {
 
             })
             button.startAnimation(myResAnimSet)
+
+
+            binding.view.setBackgroundResource(R.drawable.my_frame_anim)
+            val bgAnim = binding.view.background
+            if (bgAnim is Animatable){
+                bgAnim.start()
+            }
 //            val myAnimationSet = AnimationSet(true)
 //            myAnimationSet.duration = 3000
 //            val translate = TranslateAnimation(
