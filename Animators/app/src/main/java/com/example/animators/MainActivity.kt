@@ -6,6 +6,7 @@ import android.animation.ValueAnimator
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import com.example.animators.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -31,13 +32,27 @@ class MainActivity : AppCompatActivity() {
             yScale.repeatMode = ValueAnimator.REVERSE
             yScale.duration = 1000
 
-            val rotate = ObjectAnimator.ofFloat(binding.loudspeaker, View.ROTATION, 1000f)
+//            val rotate = ObjectAnimator.ofFloat(binding.loudspeaker, View.ROTATION, 1000f)
 
             val animatorSet = AnimatorSet()
 
-            animatorSet.playTogether(xScale, yScale, rotate)
+            animatorSet.playTogether(xScale, yScale)
 
             animatorSet.start()
+
+            binding.loudspeaker.animate()
+                .rotation(1000f)
+                .xBy(200f)
+                .yBy(100f)
+                .alpha(0.5f)
+                .withEndAction {
+                    Toast.makeText(this, "Animation Finished",
+                    Toast.LENGTH_LONG).show()
+                }
+                .start()
+
+
+
 
 
         }
