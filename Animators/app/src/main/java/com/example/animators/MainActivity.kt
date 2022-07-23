@@ -1,5 +1,6 @@
 package com.example.animators
 
+import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
 import android.animation.ValueAnimator
 import androidx.appcompat.app.AppCompatActivity
@@ -25,7 +26,20 @@ class MainActivity : AppCompatActivity() {
             xScale.repeatMode = ValueAnimator.REVERSE
             xScale.duration = 1000
 
-            xScale.start()
+            val yScale = ObjectAnimator.ofFloat(button, View.SCALE_Y, 4f)
+            yScale.repeatCount = 3
+            yScale.repeatMode = ValueAnimator.REVERSE
+            yScale.duration = 1000
+
+            val rotate = ObjectAnimator.ofFloat(binding.loudspeaker, View.ROTATION, 1000f)
+
+            val animatorSet = AnimatorSet()
+
+            animatorSet.playTogether(xScale, yScale, rotate)
+
+            animatorSet.start()
+
+
         }
     }
 }
