@@ -10,6 +10,7 @@ import androidx.transition.AutoTransition
 import androidx.transition.ChangeBounds
 import androidx.transition.Fade
 import androidx.transition.Scene
+import androidx.transition.TransitionInflater
 import androidx.transition.TransitionManager
 import androidx.transition.TransitionSet
 import androidx.transition.Visibility
@@ -28,20 +29,29 @@ class MainActivity : AppCompatActivity() {
 
         binding.hello.setOnClickListener{
             val scene2 = Scene.getSceneForLayout(binding.root, R.layout.other_layout, this)
+//
+//            val t1 = Fade()
+//            val t2 = ChangeBounds()
+//
+//            val transitionSet = TransitionSet()
+//
+//            transitionSet.apply{
+//                addTransition(t1)
+//                addTransition(t2)
+//                interpolator = AnticipateOvershootInterpolator()
+//                duration = 500
+//            }
+//
+//            TransitionManager.go(scene2, transitionSet)
+            val myTransitionSet = TransitionInflater.from(this)
+                .inflateTransition(R.transition.my_transitions)
 
-            val t1 = Fade()
-            val t2 = ChangeBounds()
+//            val myTransitionMgr = TransitionInflater.from(this)
+//                .inflateTransitionManager(R.transition.my_transition_mgr, binding.root)
+//
+//            myTransitionMgr.transitionTo(scene2)
 
-            val transitionSet = TransitionSet()
-
-            transitionSet.apply{
-                addTransition(t1)
-                addTransition(t2)
-                interpolator = AnticipateOvershootInterpolator()
-                duration = 500
-            }
-
-            TransitionManager.go(scene2, transitionSet)
+            TransitionManager.go(scene2, myTransitionSet)
         }
     }
 }
