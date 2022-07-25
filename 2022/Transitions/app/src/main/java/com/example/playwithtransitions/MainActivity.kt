@@ -27,21 +27,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.hello.setOnClickListener{
-            val t1 = ChangeBounds()
-
-            val t2 = Fade(Visibility.MODE_IN)
-
-            val set = TransitionSet()
-            set.apply{
-                addTransition(t1)
-                addTransition(t2)
-                duration = 1000
-                interpolator = AnticipateOvershootInterpolator()
-            }
-
-
-            val scene2 = Scene.getSceneForLayout(binding.root, R.layout.other_layout, this)
-            TransitionManager.go(scene2, set)
 
         }
     }
