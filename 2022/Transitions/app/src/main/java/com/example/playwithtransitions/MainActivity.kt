@@ -19,6 +19,11 @@ import com.example.playwithtransitions.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding:ActivityMainBinding
+    private lateinit var scene2: Scene
+    private lateinit var mainScene: Scene
+    private var transitionStarted = false
+    private lateinit var myTransitionSet: TransitionSet
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,31 +32,28 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(binding.root)
 
-        binding.hello.setOnClickListener{
-            val scene2 = Scene.getSceneForLayout(binding.root, R.layout.other_layout, this)
-//
-//            val t1 = Fade()
-//            val t2 = ChangeBounds()
-//
-//            val transitionSet = TransitionSet()
-//
-//            transitionSet.apply{
-//                addTransition(t1)
-//                addTransition(t2)
-//                interpolator = AnticipateOvershootInterpolator()
-//                duration = 500
-//            }
-//
-//            TransitionManager.go(scene2, transitionSet)
-            val myTransitionSet = TransitionInflater.from(this)
-                .inflateTransition(R.transition.my_transitions)
+        mainScene = Scene.getSceneForLayout(binding.root, R.layout.activity_main, this)
+        scene2 = Scene.getSceneForLayout(binding.root, R.layout.other_layout, this)
 
-//            val myTransitionMgr = TransitionInflater.from(this)
-//                .inflateTransitionManager(R.transition.my_transition_mgr, binding.root)
+        myTransitionSet = TransitionInflater.from(this)
+            .inflateTransition(R.transition.my_transitions) as TransitionSet
+
+        binding.hello.setOnClickListener{
 //
-//            myTransitionMgr.transitionTo(scene2)
+
 
             TransitionManager.go(scene2, myTransitionSet)
+            transitionStarted = true
+        }
+    }
+
+    override fun onBackPressed() {
+        if (transitionStarted){
+            TransitionManager.go(mainScene)
+            transitionStarted = false
+        }
+        else {
+            super.onBackPressed()
         }
     }
 }
