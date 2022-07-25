@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="@android:integer/config_shortAnimTime" android:drawable="@drawable/frame_left"/>
+    <item android:duration="@android:integer/config_shortAnimTime" android:drawable="@drawable/frame_top"/>
+    <item android:duration="@android:integer/config_shortAnimTime" android:drawable="@drawable/frame_right"/>
+    <item android:duration="@android:integer/config_shortAnimTime" android:drawable="@drawable/frame_bottom"/>
+</animation-list>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <objectAnimator android:propertyName="rotation"
+        android:duration="5000"
+        android:valueFrom="0"
+        android:valueTo="720"
+        />
+    <objectAnimator android:propertyName="scaleX"
+        android:valueFrom="1"
+        android:valueTo="0.5"
+        android:duration="5000"
+        />
+    <objectAnimator android:propertyName="scaleY"
+        android:valueFrom="1"
+        android:valueTo="0.5"
+        android:duration="5000"
+        />
+</set>

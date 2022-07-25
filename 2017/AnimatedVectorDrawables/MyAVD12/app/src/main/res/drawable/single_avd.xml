@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <aapt:attr name="android:drawable">
+        <vector android:height="24dp" android:viewportHeight="720"
+            android:viewportWidth="720" android:width="24dp">
+            <group android:name="mainGroup" android:pivotX="360" android:pivotY="360">
+                <path android:fillColor="#f00000" android:pathData="m363.93,45c-86.991,0 -157.46,70.472 -157.46,157.46s70.472,157.54 157.46,157.54c-43.495,-75.336 -17.679,-171.62 57.657,-215.12 24.858,-14.352 52.028,-21.178 78.806,-21.148 -27.239,-47.062 -78.175,-78.731 -136.46,-78.731z"/>
+                <path android:fillColor="#ff8000" android:pathData="m636.73,202.5c-43.495,-75.336 -139.76,-101.13 -215.1,-57.635s-101.2,139.8 -57.7,215.14c43.495,-75.336 139.79,-101.12 215.13,-57.627 24.858,14.352 44.354,34.469 57.718,57.673 27.137,-47.121 29.096,-107.07 -0.048,-157.55z"/>
+                <path android:fillColor="#ff0" android:pathData="m636.73,517.5c43.495,-75.336 17.701,-171.6 -57.635,-215.1s-171.67,-17.738 -215.16,57.598c86.991,-0 157.47,70.502 157.47,157.49 0,28.704 -7.674,55.646 -21.088,78.822 54.376,-0.059 107.27,-28.336 136.41,-78.815z"/>
+                <path android:fillColor="#007940" android:pathData="m363.93,675c86.991,-0 157.46,-70.472 157.46,-157.46s-70.472,-157.54 -157.46,-157.54c43.495,75.336 17.679,171.62 -57.657,215.12 -24.858,14.352 -52.028,21.178 -78.806,21.148 27.239,47.062 78.175,78.731 136.46,78.731z"/>
+                <path android:fillColor="#4040ff" android:pathData="m91.135,517.5c43.495,75.336 139.76,101.13 215.1,57.635s101.2,-139.8 57.7,-215.14c-43.495,75.336 -139.79,101.12 -215.13,57.627 -24.858,-14.352 -44.354,-34.469 -57.718,-57.673 -27.137,47.121 -29.096,107.07 0.048,157.55z"/>
+                <path android:fillColor="#a000c0" android:pathData="m91.135,202.5c-43.495,75.336 -17.701,171.6 57.635,215.1s171.67,17.738 215.16,-57.598c-86.991,0 -157.47,-70.502 -157.47,-157.49 -0,-28.704 7.674,-55.646 21.088,-78.822 -54.376,0.059 -107.27,28.336 -136.41,78.815z"/>
+            </group>
+        </vector>
+
+    </aapt:attr>
+
+    <target android:name="mainGroup">
+        <aapt:attr name="android:animation">
+            <set>
+
+                <objectAnimator android:propertyName="rotation"
+                    android:duration="5000"
+                    android:valueFrom="0"
+                    android:valueTo="720"
+                    />
+                <objectAnimator android:propertyName="scaleX"
+                    android:valueFrom="1"
+                    android:valueTo="0.5"
+                    android:duration="5000"
+                    />
+                <objectAnimator android:propertyName="scaleY"
+                    android:valueFrom="1"
+                    android:valueTo="0.5"
+                    android:duration="5000"
+                    />
+            </set>
+        </aapt:attr>
+    </target>
+</animated-vector>

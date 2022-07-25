@@ -1,0 +1,2 @@
+rootProject.name='Migrate To Motion Layout'
+include ':app'

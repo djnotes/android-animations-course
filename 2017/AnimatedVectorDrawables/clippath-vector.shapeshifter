@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "layers": {
+    "vectorLayer": {
+      "id": "52",
+      "name": "vector",
+      "type": "vector",
+      "width": 210,
+      "height": 210,
+      "children": [
+        {
+          "id": "18",
+          "name": "heart",
+          "type": "path",
+          "pathData": "M 97.381 60.584 C 114.784 23.902 178.808 42.755 172.641 66.578 C 164.143 99.399 97.752 161.681 97.752 161.681 C 97.752 161.681 26.185 98.684 21.57 65.785 C 18.007 40.38 73.546 21.809 97.381 60.584",
+          "strokeColor": "#000000",
+          "strokeWidth": 2
+        },
+        {
+          "id": "53",
+          "name": "mask",
+          "type": "mask",
+          "pathData": "M 97.381 60.584 C 114.784 23.902 178.808 42.755 172.641 66.578 C 164.143 99.399 97.752 161.681 97.752 161.681 C 97.752 161.681 26.185 98.684 21.57 65.785 C 18.007 40.38 73.546 21.809 97.381 60.584"
+        },
+        {
+          "id": "34",
+          "name": "small",
+          "type": "path",
+          "pathData": "M 14.496 184.354 L 188.814 184.354 L 188.814 188.071 L 14.496 188.071 Z",
+          "fillColor": "#ff0000",
+          "strokeWidth": 1
+        },
+        {
+          "id": "50",
+          "name": "big",
+          "type": "path",
+          "pathData": "M 15.239 9.664 L 189.186 9.664 L 189.186 176.549 L 15.239 176.549 Z",
+          "strokeColor": "#000000",
+          "strokeWidth": 2
+        }
+      ]
+    },
+    "hiddenLayerIds": []
+  },
+  "timeline": {
+    "animation": {
+      "id": "2",
+      "name": "anim",
+      "duration": 300,
+      "blocks": [
+        {
+          "id": "62",
+          "layerId": "34",
+          "propertyName": "pathData",
+          "startTime": 0,
+          "endTime": 300,
+          "interpolator": "FAST_OUT_SLOW_IN",
+          "type": "path",
+          "fromValue": "M 14.496 184.354 L 188.814 184.354 L 188.814 188.071 L 14.496 188.071 Z",
+          "toValue": "M 15.239 9.664 L 189.186 9.664 L 189.186 176.549 L 15.239 176.549 Z"
+        }
+      ]
+    }
+  }
+}

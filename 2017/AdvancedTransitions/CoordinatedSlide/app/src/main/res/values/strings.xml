@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Coordinated Slide</string>
+    <string name="description">A slide transition performs a sliding transition from the edge of the screen in a specified or default direction.</string>
+    <string name="animate">Animate</string>
+</resources>

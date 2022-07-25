@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Shared View Transition</string>
+    <string name="short_description">This is a short description</string>
+    <string name="long_description">This is a long description for my second layout. This is going to be different from the first description. This is not short. It is long.</string>
+</resources>
