@@ -15,7 +15,36 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:id="@+id/house"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/house"
+        android:contentDescription="@string/demo_house"
+        android:layout_margin="16dp"
 
         />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/house"
+        android:text="@string/welcome_to_my_app"
+        android:padding="8dp"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline3"
+        android:gravity="center"
+        android:id="@+id/greeting"
+        />
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
