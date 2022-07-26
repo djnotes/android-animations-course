@@ -6,6 +6,7 @@ import android.view.View
 import android.view.animation.AnticipateInterpolator
 import android.view.animation.AnticipateOvershootInterpolator
 import android.view.animation.OvershootInterpolator
+import androidx.constraintlayout.widget.ConstraintSet
 import androidx.interpolator.view.animation.LinearOutSlowInInterpolator
 import androidx.transition.AutoTransition
 import androidx.transition.ChangeBounds
@@ -41,12 +42,18 @@ class MainActivity : AppCompatActivity() {
 
         binding.hello.setOnClickListener{
 //
-            TransitionManager.beginDelayedTransition(binding.root, myTransitionSet)
-            binding.group.visibility = View.VISIBLE
-            binding.hello.visibility = View.GONE
+//            TransitionManager.beginDelayedTransition(binding.root, myTransitionSet)
+//            binding.group.visibility = View.VISIBLE
+//            binding.hello.visibility = View.GONE
+
 
 //            TransitionManager.go(scene2, myTransitionSet)
 //            transitionStarted = true
+
+            val constraintSet = ConstraintSet()
+            constraintSet.clone(this, R.layout.other_layout)
+            TransitionManager.beginDelayedTransition(binding.root, myTransitionSet)
+            constraintSet.applyTo(binding.root)
         }
     }
 
