@@ -2,6 +2,7 @@ package com.example.playwithtransitions
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.view.animation.AnticipateInterpolator
 import android.view.animation.AnticipateOvershootInterpolator
 import android.view.animation.OvershootInterpolator
@@ -40,10 +41,12 @@ class MainActivity : AppCompatActivity() {
 
         binding.hello.setOnClickListener{
 //
+            TransitionManager.beginDelayedTransition(binding.root, myTransitionSet)
+            binding.group.visibility = View.VISIBLE
+            binding.hello.visibility = View.GONE
 
-
-            TransitionManager.go(scene2, myTransitionSet)
-            transitionStarted = true
+//            TransitionManager.go(scene2, myTransitionSet)
+//            transitionStarted = true
         }
     }
 
