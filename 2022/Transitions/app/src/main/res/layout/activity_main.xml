@@ -14,46 +14,54 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:layout_width="0dp"
-        android:layout_height="300dp"
         android:id="@+id/house"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/house"
-        android:contentDescription="@string/demo_house"
+        android:layout_width="200dp"
+        android:layout_height="300dp"
         android:layout_margin="16dp"
+        android:layout_marginStart="97dp"
+        android:contentDescription="@string/demo_house"
+        android:src="@drawable/house"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toEndOf="@+id/bird"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/bird"
+        android:layout_width="200dp"
+        android:layout_height="300dp"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/demo_house"
+        android:src="@drawable/hello"
+        app:layout_constraintEnd_toStartOf="@id/house"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
 
         />
 
     <TextView
+        android:id="@+id/greeting"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/house"
-        android:text="@string/welcome_to_my_app"
-        android:padding="8dp"
-        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline3"
         android:gravity="center"
-        android:id="@+id/greeting"
-        />
+        android:padding="8dp"
+        android:text="@string/welcome_to_my_app"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/house" />
 
 
     <androidx.constraintlayout.widget.Group
+        android:id="@+id/group"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:id="@+id/group"
-        app:constraint_referenced_ids="house,greeting"
         android:visibility="visible"
-        />
-
-
+        app:constraint_referenced_ids="house,greeting" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
