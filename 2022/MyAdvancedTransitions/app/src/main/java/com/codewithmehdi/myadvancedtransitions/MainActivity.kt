@@ -42,5 +42,22 @@ class MainActivity : AppCompatActivity() {
 
             binding.cat.visibility = View.INVISIBLE
         }
+
+
+        binding.reset.setOnClickListener {
+            TransitionManager.beginDelayedTransition(
+                binding.root,
+                Explode()
+            )
+
+            binding.dog.visibility = View.VISIBLE
+
+            TransitionManager.beginDelayedTransition(
+                binding.root,
+                Slide(Gravity.END)
+            )
+
+            binding.cat.visibility = View.VISIBLE
+        }
     }
 }
