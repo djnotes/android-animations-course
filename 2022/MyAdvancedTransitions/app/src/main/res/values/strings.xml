@@ -3,4 +3,9 @@
     <string name="slide_and_explode">Slide and Explode</string>
     <string name="coordinated_motion">Coordinated Motion</string>
     <string name="not_implemented">Not implemented</string>
+    <string name="transfoms">Transfoms</string>
+    <string name="shared_element_transitions">Shared Element Transitions</string>
+    <string name="window_content_transitions">Window Content Transitions</string>
+    <string name="fragment_transitions">Fragment Transitions</string>
+    <string name="advanced_transitions">Advanced Transitions</string>
 </resources>

@@ -1,22 +1,22 @@
 package com.codewithmehdi.myadvancedtransitions
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Gravity
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.transition.Explode
 import androidx.transition.Slide
 import androidx.transition.TransitionManager
-import com.codewithmehdi.myadvancedtransitions.databinding.ActivityMainBinding
+import com.codewithmehdi.myadvancedtransitions.databinding.ActivityCoordinatedBinding
 
 class ExplodeSlideActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityCoordinatedBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityCoordinatedBinding.inflate(layoutInflater)
 
         setContentView(binding.root)
 

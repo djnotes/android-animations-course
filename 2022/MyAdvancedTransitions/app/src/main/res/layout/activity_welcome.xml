@@ -6,6 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".WelcomeActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lessonTitle"
+        android:text="@string/advanced_transitions"
+        android:layout_margin="8dp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:paddingStart="@dimen/list_item_margin"
+        />
+
     <LinearLayout
         android:id="@+id/list"
         android:layout_width="0dp"
@@ -14,29 +28,80 @@
         android:layout_marginTop="1dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="1dp"
-        android:gravity="center_vertical"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/lessonTitle"
+
+        >
 
         <TextView
+            android:id="@+id/go_explode_slide"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/list_item_margin"
             android:gravity="start"
             android:text="@string/slide_and_explode"
-            android:id="@+id/go_explode_slide"
+            android:paddingStart="@dimen/list_item_padding"
+            android:paddingEnd="@dimen/list_item_padding"
             />
 
         <TextView
+            android:id="@+id/go_coordinated"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/list_item_margin"
             android:gravity="start"
             android:text="@string/coordinated_motion"
-            android:id="@+id/go_coordinated"
+            android:paddingStart="@dimen/list_item_padding"
+            android:paddingEnd="@dimen/list_item_padding"
+
             />
 
+        <TextView
+            android:id="@+id/go_transforms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/list_item_margin"
+            android:gravity="start"
+            android:text="@string/transfoms"
+            android:paddingStart="@dimen/list_item_padding"
+            android:paddingEnd="@dimen/list_item_padding"
+            />
+
+        <TextView
+            android:id="@+id/go_shared_element_transition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/list_item_margin"
+            android:gravity="start"
+            android:text="@string/shared_element_transitions"
+            android:paddingStart="@dimen/list_item_padding"
+            android:paddingEnd="@dimen/list_item_padding"
+            />
+
+        <TextView
+            android:id="@+id/go_window_content_transition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/list_item_margin"
+            android:gravity="start"
+            android:text="@string/window_content_transitions"
+            android:paddingStart="@dimen/list_item_padding"
+            android:paddingEnd="@dimen/list_item_padding"
+            />
+
+        <TextView
+            android:id="@+id/go_fragment_transition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/list_item_margin"
+            android:gravity="start"
+            android:text="@string/fragment_transitions"
+            android:paddingStart="@dimen/list_item_padding"
+            android:paddingEnd="@dimen/list_item_padding"
+            />
 
 
     </LinearLayout>
