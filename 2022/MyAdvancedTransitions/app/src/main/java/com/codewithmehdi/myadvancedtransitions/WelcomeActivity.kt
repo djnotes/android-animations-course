@@ -14,6 +14,7 @@ import com.codewithmehdi.myadvancedtransitions.databinding.ActivityWelcomeBindin
 
 class WelcomeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityWelcomeBinding
+    private var slideDone = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,6 +43,8 @@ class WelcomeActivity : AppCompatActivity() {
                             )
 
                         }
+                        slideDone = true
+
                     }
 
                     R.id.go_transforms -> {
@@ -67,5 +70,25 @@ class WelcomeActivity : AppCompatActivity() {
         }
 
 
+    }
+
+    override fun onBackPressed() {
+        if (slideDone){
+            binding.list.forEachIndexed { index, view ->
+                view.postDelayed({
+                    TransitionManager.beginDelayedTransition(
+                        binding.root,
+                        Slide(Gravity.END)
+                    )
+
+                    view.visibility = View.VISIBLE
+                },
+                index * 200 .toLong())
+
+            }
+            slideDone = false
+        }
+        else
+            super.onBackPressed()
     }
 }
