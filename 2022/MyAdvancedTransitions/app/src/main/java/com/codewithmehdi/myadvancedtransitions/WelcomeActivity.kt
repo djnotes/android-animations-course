@@ -28,7 +28,20 @@ class WelcomeActivity : AppCompatActivity() {
                         Intent(this, ExplodeSlideActivity::class.java)
                     )
                     R.id.go_coordinated -> {
+                        binding.list.forEachIndexed { index, listItem ->
+                            listItem.postDelayed(
+                                {
+                                    TransitionManager.beginDelayedTransition(
+                                        binding.root,
+                                        Slide(Gravity.END)
+                                    )
 
+                                    listItem.visibility = View.INVISIBLE
+                                },
+                                index * 200 .toLong()
+                            )
+
+                        }
                     }
 
                     R.id.go_transforms -> {
