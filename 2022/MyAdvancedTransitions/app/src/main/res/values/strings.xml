@@ -8,4 +8,8 @@
     <string name="window_content_transitions">Window Content Transitions</string>
     <string name="fragment_transitions">Fragment Transitions</string>
     <string name="advanced_transitions">Advanced Transitions</string>
+    <string name="transforms">Transforms</string>
+    <string name="changetransform">ChangeTransform</string>
+    <string name="changeimagetransform">ChangeImageTransform</string>
+    <string name="changeclipbounds">ChangeClipBounds</string>
 </resources>

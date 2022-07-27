@@ -48,7 +48,9 @@ class WelcomeActivity : AppCompatActivity() {
                     }
 
                     R.id.go_transforms -> {
-
+                        startActivity(
+                            Intent(this, TransformActivity::class.java)
+                        )
                     }
 
                     R.id.go_shared_element_transition -> {

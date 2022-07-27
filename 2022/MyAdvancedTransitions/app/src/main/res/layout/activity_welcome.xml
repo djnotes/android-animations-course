@@ -36,7 +36,7 @@
 
         >
 
-        <TextView
+        <Button
             android:id="@+id/go_explode_slide"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -47,7 +47,7 @@
             android:paddingEnd="@dimen/list_item_padding"
             />
 
-        <TextView
+        <Button
             android:id="@+id/go_coordinated"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -59,7 +59,7 @@
 
             />
 
-        <TextView
+        <Button
             android:id="@+id/go_transforms"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -70,7 +70,7 @@
             android:paddingEnd="@dimen/list_item_padding"
             />
 
-        <TextView
+        <Button
             android:id="@+id/go_shared_element_transition"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -81,7 +81,7 @@
             android:paddingEnd="@dimen/list_item_padding"
             />
 
-        <TextView
+        <Button
             android:id="@+id/go_window_content_transition"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -92,7 +92,7 @@
             android:paddingEnd="@dimen/list_item_padding"
             />
 
-        <TextView
+        <Button
             android:id="@+id/go_fragment_transition"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
