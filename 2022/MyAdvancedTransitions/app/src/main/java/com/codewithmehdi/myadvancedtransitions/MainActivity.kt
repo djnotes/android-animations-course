@@ -2,10 +2,45 @@ package com.codewithmehdi.myadvancedtransitions
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Gravity
+import android.view.View
+import androidx.transition.Explode
+import androidx.transition.Slide
+import androidx.transition.TransitionManager
+import com.codewithmehdi.myadvancedtransitions.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+
+        binding = ActivityMainBinding.inflate(layoutInflater)
+
+        setContentView(binding.root)
+
+        binding.dog.setOnClickListener {
+            val explode = Explode()
+
+            TransitionManager.beginDelayedTransition(
+                binding.root, explode
+            )
+
+            binding.dog.visibility = View.INVISIBLE
+        }
+
+
+        binding.cat.setOnClickListener {
+
+            val slide = Slide(Gravity.LEFT)
+
+            TransitionManager.beginDelayedTransition(
+                binding.root,
+                slide
+            )
+
+            binding.cat.visibility = View.INVISIBLE
+        }
     }
 }
