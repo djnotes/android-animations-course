@@ -7,16 +7,16 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.transition.Explode
 import androidx.transition.Slide
 import androidx.transition.TransitionManager
-import com.codewithmehdi.myadvancedtransitions.databinding.ActivityCoordinatedBinding
+import com.codewithmehdi.myadvancedtransitions.databinding.ActivityExplodeBinding
 
 class ExplodeSlideActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityCoordinatedBinding
+    private lateinit var binding: ActivityExplodeBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityCoordinatedBinding.inflate(layoutInflater)
+        binding = ActivityExplodeBinding.inflate(layoutInflater)
 
         setContentView(binding.root)
 
