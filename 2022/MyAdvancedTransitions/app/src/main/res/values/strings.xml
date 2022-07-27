@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">My Advanced Transitions</string>
+    <string name="slide_and_explode">Slide and Explode</string>
+    <string name="coordinated_motion">Coordinated Motion</string>
+    <string name="not_implemented">Not implemented</string>
 </resources>

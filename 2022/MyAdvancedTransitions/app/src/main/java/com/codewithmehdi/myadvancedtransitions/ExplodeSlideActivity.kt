@@ -9,7 +9,7 @@ import androidx.transition.Slide
 import androidx.transition.TransitionManager
 import com.codewithmehdi.myadvancedtransitions.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+class ExplodeSlideActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
