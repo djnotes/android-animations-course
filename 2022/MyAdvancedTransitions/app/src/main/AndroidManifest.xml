@@ -13,6 +13,9 @@
         android:theme="@style/Theme.MyAdvancedTransitions"
         tools:targetApi="31">
         <activity
+            android:name=".MyFragmentActivity"
+            android:exported="false" />
+        <activity
             android:name=".SharedElementActivity"
             android:exported="false" />
         <activity
