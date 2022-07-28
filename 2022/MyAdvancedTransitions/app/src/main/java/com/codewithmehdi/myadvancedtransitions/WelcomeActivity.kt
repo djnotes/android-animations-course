@@ -1,14 +1,15 @@
 package com.codewithmehdi.myadvancedtransitions
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.transition.Slide
 import android.transition.TransitionManager
 import android.view.Gravity
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityOptionsCompat
+import androidx.core.util.Pair
 import androidx.core.view.forEach
 import androidx.core.view.forEachIndexed
 import com.codewithmehdi.myadvancedtransitions.databinding.ActivityWelcomeBinding
@@ -58,7 +59,8 @@ class WelcomeActivity : AppCompatActivity() {
                         startActivity(
                             Intent(this, SharedElementActivity::class.java),
                             ActivityOptionsCompat.makeSceneTransitionAnimation(this,
-                            binding.cat, "cat")
+                                Pair(binding.cat, "cat"), Pair(binding.dog, "dog")
+                            )
                                 .toBundle()
                         )
                     }

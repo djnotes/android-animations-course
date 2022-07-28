@@ -10,11 +10,23 @@
         android:id="@+id/imageView"
         android:layout_width="300dp"
         android:layout_height="300dp"
+        android:transitionName="cat"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/cat" />
+
+
+    <ImageView
+        android:id="@+id/dog"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/dog"
+        android:transitionName="dog"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/cat"
-        android:transitionName="cat"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="8dp"
+        app:srcCompat="@drawable/dog" />
 </androidx.constraintlayout.widget.ConstraintLayout>
