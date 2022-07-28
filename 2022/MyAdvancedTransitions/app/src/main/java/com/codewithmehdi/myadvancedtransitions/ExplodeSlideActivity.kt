@@ -16,6 +16,10 @@ class ExplodeSlideActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        window.enterTransition = android.transition.Slide(Gravity.START)
+        window.returnTransition = android.transition.Slide(Gravity.END)
+
+
         binding = ActivityExplodeBinding.inflate(layoutInflater)
 
         setContentView(binding.root)

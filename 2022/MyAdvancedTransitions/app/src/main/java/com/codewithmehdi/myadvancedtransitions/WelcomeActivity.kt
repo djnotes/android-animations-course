@@ -64,7 +64,11 @@ class WelcomeActivity : AppCompatActivity() {
                     }
 
                     R.id.go_window_content_transition -> {
-
+                        startActivity(
+                            Intent(this, ExplodeSlideActivity::class.java),
+                            ActivityOptionsCompat.makeSceneTransitionAnimation(this)
+                                .toBundle()
+                        )
                     }
 
                     R.id.go_fragment_transition -> {

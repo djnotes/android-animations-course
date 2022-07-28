@@ -15,5 +15,9 @@
 
         <item name="android:fontFamily">@font/gochihand</item>
         <item name="android:textSize">20sp</item>
+        <item name="android:windowContentTransitions">true</item>
+<!--        <item name="android:windowEnterTransition">@android:transition/slide_left</item>-->
+<!--        <item name="android:windowReturnTransition">@android:transition/slide_right</item>-->
+
     </style>
 </resources>
