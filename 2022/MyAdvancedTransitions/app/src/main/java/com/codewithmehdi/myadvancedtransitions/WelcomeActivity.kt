@@ -8,6 +8,7 @@ import android.transition.TransitionManager
 import android.view.Gravity
 import android.view.View
 import android.widget.Toast
+import androidx.core.app.ActivityOptionsCompat
 import androidx.core.view.forEach
 import androidx.core.view.forEachIndexed
 import com.codewithmehdi.myadvancedtransitions.databinding.ActivityWelcomeBinding
@@ -54,7 +55,12 @@ class WelcomeActivity : AppCompatActivity() {
                     }
 
                     R.id.go_shared_element_transition -> {
-
+                        startActivity(
+                            Intent(this, SharedElementActivity::class.java),
+                            ActivityOptionsCompat.makeSceneTransitionAnimation(this,
+                            binding.cat, "cat")
+                                .toBundle()
+                        )
                     }
 
                     R.id.go_window_content_transition -> {
