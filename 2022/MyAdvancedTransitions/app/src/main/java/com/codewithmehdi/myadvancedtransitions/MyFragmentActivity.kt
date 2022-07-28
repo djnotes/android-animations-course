@@ -2,6 +2,9 @@ package com.codewithmehdi.myadvancedtransitions
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.transition.Explode
+import android.transition.Slide
+import android.view.Gravity
 import com.codewithmehdi.myadvancedtransitions.databinding.ActivityMyFragmentBinding
 
 class MyFragmentActivity : AppCompatActivity() {
@@ -15,7 +18,8 @@ class MyFragmentActivity : AppCompatActivity() {
 
         setContentView(binding.root)
 
-        binding.start.setOnClickListener {
+        binding.trigger.setOnClickListener {
+            //TODO: Add fragment to FrameLayout
 
         }
 

@@ -72,7 +72,9 @@ class WelcomeActivity : AppCompatActivity() {
                     }
 
                     R.id.go_fragment_transition -> {
-
+                        startActivity(
+                            Intent(this, MyFragmentActivity::class.java)
+                        )
                     }
 
                     else -> Toast.makeText(applicationContext, R.string.not_implemented,

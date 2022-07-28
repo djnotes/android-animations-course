@@ -39,9 +39,7 @@ class MyFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = FragmentMyBinding.inflate(layoutInflater, container, false)
 
-        binding.root.setOnClickListener {
 
-        }
         return binding.root
 //        return inflater.inflate(R.layout.fragment_my, container, false)
     }
