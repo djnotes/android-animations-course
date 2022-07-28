@@ -19,7 +19,18 @@ class MyFragmentActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.trigger.setOnClickListener {
-            //TODO: Add fragment to FrameLayout
+            val frag = MyFragment()
+
+            frag.enterTransition = Explode()
+            frag.returnTransition = Slide(Gravity.END)
+
+            val transaction = supportFragmentManager.beginTransaction()
+
+            transaction.add(R.id.container, frag)
+            transaction.addToBackStack(null)
+
+            transaction.commit()
+
 
         }
 
