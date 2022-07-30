@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.image1.setOnClickListener {
+
             ((it as ImageView).drawable as AnimatedVectorDrawable).start()
         }
     }

@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <objectAnimator xmlns:android="http://schemas.android.com/apk/res/android"
-    android:valueFrom="0"
-    android:valueTo="90"
     android:valueType="floatType"
-    android:propertyName="rotation"
+    android:propertyName="scaleX"
     android:duration="1000"
+    android:valueFrom="1"
+    android:valueTo="2"
     >
-
 
 </objectAnimator>

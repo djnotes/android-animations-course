@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector android:drawable="@drawable/rect"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <target
+        android:animation="@animator/rotate"
+        android:name="group"
+        />
+    <target
+        android:animation="@animator/scale"
+        android:name="group"
+        />
+</animated-vector>
