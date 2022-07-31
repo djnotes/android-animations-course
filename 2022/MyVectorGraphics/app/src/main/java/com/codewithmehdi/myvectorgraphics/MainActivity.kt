@@ -19,12 +19,15 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(binding.root)
 
-        binding.startAVDs.setOnClickListener {
+        binding.startAVDsStatic.setOnClickListener {
             binding.AVDsContainer.forEach {view->
                 if (view is ImageView){
                     (view.drawable as AnimatedVectorDrawable).start()
                 }
             }
         }
+
+
+
     }
 }

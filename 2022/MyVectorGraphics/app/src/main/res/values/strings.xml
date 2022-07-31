@@ -6,4 +6,8 @@
     <string name="animating_heart">Animating Heart</string>
     <string name="animating_tick">Animating Tick</string>
     <string name="animating_rectangle">Animating Rectangle</string>
+    <string name="start_avds_static">Start AVDs (Static)</string>
+    <string name="start_avd_background">Start AVD (Background)</string>
+    <string name="static_avd_background">Static AVD (Background)</string>
+    <string name="start_avd_dynamic">Start AVD (Dynamic)</string>
 </resources>
