@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">My Vector Graphics</string>
     <string name="animated_vector_drawables">Animated Vector Drawables</string>
+    <string name="start_avds">Start AVDs</string>
+    <string name="animating_circle">Animating Circle</string>
+    <string name="animating_heart">Animating Heart</string>
+    <string name="animating_tick">Animating Tick</string>
+    <string name="animating_rectangle">Animating Rectangle</string>
 </resources>

@@ -4,6 +4,7 @@ import android.graphics.drawable.AnimatedVectorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
+import androidx.core.view.forEach
 import androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat
 import com.codewithmehdi.myvectorgraphics.databinding.ActivityMainBinding
 
@@ -18,9 +19,12 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(binding.root)
 
-        binding.image1.setOnClickListener {
-
-            ((it as ImageView).drawable as AnimatedVectorDrawable).start()
+        binding.startAVDs.setOnClickListener {
+            binding.AVDsContainer.forEach {view->
+                if (view is ImageView){
+                    (view.drawable as AnimatedVectorDrawable).start()
+                }
+            }
         }
     }
 }
