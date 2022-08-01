@@ -20,10 +20,9 @@
         <aapt:attr name="android:animation">
             <objectAnimator
                 android:propertyName="trimPathOffset"
-                android:duration="1000"
+                android:duration="300"
                 android:valueFrom="0"
                 android:valueTo="1"
-                android:repeatCount="infinite"
                 android:valueType="floatType"
                 android:interpolator="@android:anim/linear_interpolator"/>
         </aapt:attr>
