@@ -1,6 +1,8 @@
 package com.codewithmehdi.myphysicalanimationapp
 
+import android.media.MediaPlayer
 import android.os.Bundle
+import android.util.TypedValue
 import android.view.GestureDetector
 import android.view.GestureDetector.SimpleOnGestureListener
 import android.view.MotionEvent
@@ -8,6 +10,8 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.dynamicanimation.animation.DynamicAnimation
 import androidx.dynamicanimation.animation.FlingAnimation
+import androidx.dynamicanimation.animation.SpringAnimation
+import androidx.dynamicanimation.animation.SpringForce
 import com.codewithmehdi.myphysicalanimationapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity(){
@@ -46,6 +50,35 @@ class MainActivity : AppCompatActivity(){
             }
         }
 
+
+        binding.land.setOnClickListener {
+            SpringAnimation(
+                binding.greeting,
+                DynamicAnimation.Y
+            ).apply{
+                spring = SpringForce().apply{
+                    dampingRatio = SpringForce.DAMPING_RATIO_HIGH_BOUNCY
+                    stiffness = SpringForce.STIFFNESS_LOW
+                    finalPosition = 0f
+                }
+
+                val dpPerSec = -100f
+                val pxPerSec = TypedValue.applyDimension(
+                    TypedValue.COMPLEX_UNIT_DIP,
+                    dpPerSec,
+                    resources.displayMetrics
+                )
+
+                setStartVelocity(pxPerSec)
+
+                start()
+                MediaPlayer.create(this@MainActivity, R.raw.hello)
+                    .start()
+
+            }
+
+
+        }
 
 
     }
