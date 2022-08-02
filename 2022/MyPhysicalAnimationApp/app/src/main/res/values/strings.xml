@@ -3,4 +3,5 @@
     <string name="sprite">Sprite</string>
     <string name="bird">Bird</string>
     <string name="cloud">Cloud</string>
+    <string name="greeting_bird">Greeting Bird</string>
 </resources>

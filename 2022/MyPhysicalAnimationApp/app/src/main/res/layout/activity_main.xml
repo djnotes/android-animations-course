@@ -5,6 +5,7 @@
     android:id="@+id/screen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#87ceeb"
     tools:context=".MainActivity">
 
     <ImageView
@@ -33,7 +34,7 @@
         android:id="@+id/land"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="-62dp"
+        android:layout_marginBottom="-56dp"
         android:src="@drawable/farm"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -64,6 +65,19 @@
         app:layout_constraintTop_toTopOf="parent"
         />
 
+
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/greeting"
+        android:src="@drawable/greeting"
+        app:flow_horizontalBias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/land"
+        android:contentDescription="@string/greeting_bird"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
