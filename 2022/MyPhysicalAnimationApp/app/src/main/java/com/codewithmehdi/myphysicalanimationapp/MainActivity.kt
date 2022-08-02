@@ -70,6 +70,14 @@ class MyOnGestureListener(private val view: View): SimpleOnGestureListener(){
             setStartVelocity(velocityY)
             start()
         }
+
+        FlingAnimation(view, DynamicAnimation.X).apply{
+            setMinValue(0f)
+            setMaxValue(view.resources.displayMetrics.widthPixels.toFloat() - view.width)
+            setStartVelocity(velocityX)
+            start()
+        }
+
         return super.onFling(e1, e2, velocityX, velocityY)
     }
 }
