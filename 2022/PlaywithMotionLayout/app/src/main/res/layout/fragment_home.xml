@@ -26,53 +26,29 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/default_margin"
             android:padding="@dimen/default_padding"
-            android:text="Simple Motion"/>
+            android:text="Simple Motion"
+            android:id="@+id/simple_motion"
+            />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/default_margin"
             android:padding="@dimen/default_padding"
-            android:text="Curved Motion"/>
+            android:text="Keyframes"
+            android:id="@+id/keyframes"
+            />
+
+
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/default_margin"
             android:padding="@dimen/default_padding"
-            android:text="Motion Triggers"/>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/default_margin"
-            android:padding="@dimen/default_padding"
-            android:text="Animate Attributes"/>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/default_margin"
-            android:padding="@dimen/default_padding"
-            android:text="Make Complex Animations"/>
-
-        <androidx.constraintlayout.utils.widget.MotionButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/default_margin"
-            android:padding="@dimen/default_padding"
-            android:text="Animate Attributes"/>
-
-        <androidx.constraintlayout.utils.widget.MotionButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/default_margin"
-            android:padding="@dimen/default_padding"
-            android:text="Get the Most out of ML Visual Editor"/>
-
-
-
-
+            android:text="Make Complex Motions"
+            android:id="@+id/make_complex_motions"
+            />
 
 
 

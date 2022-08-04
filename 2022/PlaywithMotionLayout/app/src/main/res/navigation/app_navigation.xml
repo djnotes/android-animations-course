@@ -6,5 +6,6 @@
     >
 
     <fragment android:id="@+id/home" android:name="com.codewithmehdi.playwithmotionlayout.HomeFragment" />
+    <fragment android:id="@+id/complex_motion" android:name="com.codewithmehdi.playwithmotionlayout.ComplexMotionFragment"/>
 
 </navigation>
