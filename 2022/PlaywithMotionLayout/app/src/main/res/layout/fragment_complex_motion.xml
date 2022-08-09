@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layoutDescription="@xml/fragment_complex_motion_scene"
     tools:context=".ComplexMotionFragment">
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -14,34 +15,34 @@
             android:layout_marginBottom="@dimen/default_margin"
             android:clickable="true"
             android:contentDescription="@string/add_new_item"
+
             android:src="@drawable/add"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/audio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/audio"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/fab"
             android:layout_marginRight="@dimen/default_margin"
             android:layout_marginBottom="@dimen/default_margin"
-            android:src="@drawable/ic_audiotrack"
-            />
+            android:text="New Recording"
+            app:icon="@drawable/ic_audiotrack"
+            app:layout_constraintBottom_toTopOf="@id/fab"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/fab" />
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/note"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/note"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/audio"
+            android:text="New Note"
             android:layout_marginEnd="@dimen/default_margin"
             android:layout_marginBottom="@dimen/default_margin"
-            android:src="@drawable/ic_note"
+            app:icon="@drawable/ic_note"
+            app:layout_constraintBottom_toTopOf="@id/audio"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/audio" />
 
-            />
 
-
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.motion.widget.MotionLayout>

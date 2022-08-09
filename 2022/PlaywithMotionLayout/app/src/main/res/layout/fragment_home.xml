@@ -1,25 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/grid"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".HomeFragment">
+    app:columnCount="2"
+    app:rowCount="5"
+    app:orientation="vertical">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="start"
+    >
 
-    <!-- TODO: Update blank fragment layout -->
-<!--    <TextView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:text="@string/hello_blank_fragment" />-->
-
-    <androidx.gridlayout.widget.GridLayout
-        android:id="@+id/grid"
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:columnCount="2"
-        app:rowCount="5"
-        app:orientation="vertical"
-        >
+        android:layout_height="wrap_content"
+        android:id="@+id/homeTitle"
+        android:layout_margin="@dimen/default_margin"
+        android:padding="@dimen/default_margin"
+        android:text="My MotionLayout Demos"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+        />
 
         <Button
             android:layout_width="wrap_content"
@@ -27,7 +30,7 @@
             android:layout_margin="@dimen/default_margin"
             android:padding="@dimen/default_padding"
             android:text="Simple Motion"
-            android:id="@+id/simple_motion"
+            android:id="@+id/make_simple_motion"
             />
 
         <Button
@@ -50,8 +53,27 @@
             android:id="@+id/make_complex_motions"
             />
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_margin"
+            android:padding="@dimen/default_padding"
+            android:text="Make Carousel Motion"
+            android:id="@+id/make_carousel_motion"
+            />
 
 
-    </androidx.gridlayout.widget.GridLayout>
+    <Button
+        android:id="@+id/make_coordinator_motion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_margin"
+        android:padding="@dimen/default_padding"
+        android:text="Make CoordinatorLayout Motion" />
 
-</FrameLayout>
+
+</LinearLayout>
+
+
+    </ScrollView>
+

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:pathMotionArc="startVertical"
+        motion:duration="1000">
+       <KeyFrameSet
+           >
+
+
+       </KeyFrameSet>
+        <OnClick motion:targetId="@id/add_phone" motion:clickAction="toggle"/>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+
+        <Constraint
+            motion:layout_constraintTag="phone_tag"
+            android:id="@id/phone"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_width="@dimen/image_size"
+            android:layout_height="@dimen/image_size"
+            />
+        <Constraint
+            android:layout_height="@dimen/image_size"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="@dimen/image_size"
+            motion:layout_constraintTop_toBottomOf="@id/guide"
+            android:id="@+id/smartphone" />
+        <Constraint
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/add_smartphone"
+            android:id="@+id/info"
+            motion:layout_constraintBottom_toTopOf="@+id/imageFilterView"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint motion:layout_constraintTag="phone_tag"
+            android:id="@id/phone"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="@dimen/image_size"
+            android:layout_height="@dimen/image_size"
+            >
+            <PropertySet android:alpha="0"
+                />
+        </Constraint>
+
+    </ConstraintSet>
+</MotionScene>
