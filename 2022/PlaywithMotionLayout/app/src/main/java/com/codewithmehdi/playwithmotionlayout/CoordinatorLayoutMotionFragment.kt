@@ -39,11 +39,7 @@ class CoordinatorLayoutMotionFragment : Fragment() {
         // Inflate the layout for this fragment
         val binding = FragmentCoordinatorLayoutMotionBinding.inflate(layoutInflater, container, false)
 
-        binding.apply{
-            appbarLayout.addOnOffsetChangedListener{_,verticalOffset->
-                motionLayout.progress =  - verticalOffset / appbarLayout.totalScrollRange.toFloat()
-            }
-        }
+
 
         return binding.root
 

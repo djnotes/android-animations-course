@@ -10,13 +10,12 @@
         android:layout_height="180dp"
         android:fitsSystemWindows="false">
 
-        <androidx.constraintlayout.motion.widget.MotionLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/motion_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fitsSystemWindows="false"
             android:minHeight="80dp"
-            motion:layoutDescription="@xml/inner_motionlayout_scene"
             motion:layout_scrollFlags="scroll|enterAlways|snap|exitUntilCollapsed"
             >
 
@@ -59,7 +58,7 @@
 
 
 
-        </androidx.constraintlayout.motion.widget.MotionLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.core.widget.NestedScrollView

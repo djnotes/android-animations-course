@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layoutDescription="@xml/fragment_carousel_motion_scene"
     tools:context=".CarouselMotionFragment"
     app:motionDebug="SHOW_ALL"
     android:id="@+id/motion_layout"
@@ -88,16 +87,6 @@
 
 
 
-    <androidx.constraintlayout.helper.widget.Carousel
-        android:layout_width="@dimen/image_size"
-        android:layout_height="@dimen/image_size"
-        android:id="@+id/carousel"
-        app:carousel_forwardTransition="@+id/forward"
-        app:carousel_backwardTransition="@+id/backward"
-        app:carousel_previousState="@+id/previous"
-        app:carousel_nextState="@+id/next"
-        app:carousel_infinite="true"
-        app:carousel_firstView="@+id/widgetC"
-        app:constraint_referenced_ids="widgetA, widgetB, widgetC, widgetD, widgetE"/>
 
-</androidx.constraintlayout.motion.widget.MotionLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

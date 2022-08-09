@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layoutDescription="@xml/fragment_complex_motion_scene"
     tools:context=".ComplexMotionFragment">
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -13,7 +12,6 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/default_margin"
             android:layout_marginBottom="@dimen/default_margin"
-            android:clickable="true"
             android:contentDescription="@string/add_new_item"
 
             android:src="@drawable/add"
@@ -26,7 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/default_margin"
             android:layout_marginBottom="@dimen/default_margin"
-            android:text="New Recording"
+            android:text="@string/new_recording"
             app:icon="@drawable/ic_audiotrack"
             app:layout_constraintBottom_toTopOf="@id/fab"
             app:layout_constraintEnd_toEndOf="parent"
@@ -36,7 +34,7 @@
             android:id="@+id/note"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New Note"
+            android:text="@string/new_note"
             android:layout_marginEnd="@dimen/default_margin"
             android:layout_marginBottom="@dimen/default_margin"
             app:icon="@drawable/ic_note"
@@ -45,4 +43,4 @@
             app:layout_constraintStart_toStartOf="@+id/audio" />
 
 
-</androidx.constraintlayout.motion.widget.MotionLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
