@@ -49,45 +49,6 @@ class KeyframesFragment : Fragment() {
         binding = FragmentKeyframesBinding.inflate(layoutInflater, container, false)
 
         binding.apply{
-            root.setDebugMode(MotionLayout.DEBUG_SHOW_PATH)
-            updateUi(binding, smartphone)
-
-            smartphone.setOnClickListener {
-                val scales = listOf(1.0f, 2f, 3f, 4f, 5f, 6f, 7f)
-                val offsets = listOf(5f, 10f, 20f, 40f, 80f,
-                    -5F, -10F, -20F,-40F, -80F)
-
-
-                ObjectAnimator.ofFloat(smartphone, View.TRANSLATION_X, offsets[Random.nextInt(0,1_000_000) % offsets.size]).apply {
-                    duration = 1000
-                    addListener(object: AnimatorListener{
-
-                        override fun onAnimationStart(animation: Animator?, isReverse: Boolean) {
-                            super.onAnimationStart(animation, isReverse)
-                        }
-
-                        override fun onAnimationStart(animation: Animator?) {
-                        }
-
-                        override fun onAnimationEnd(animation: Animator?, isReverse: Boolean) {
-                            super.onAnimationEnd(animation, isReverse)
-                        }
-
-                        override fun onAnimationEnd(animation: Animator?) {
-                            updateUi(binding, smartphone)
-                        }
-
-                        override fun onAnimationCancel(animation: Animator?) {
-                        }
-
-                        override fun onAnimationRepeat(animation: Animator?) {
-                        }
-                    })
-
-                    start()
-                }
-
-            }
 
 
         }
@@ -95,16 +56,6 @@ class KeyframesFragment : Fragment() {
         return binding.root
 
 //        return inflater.inflate(R.layout.fragment_keyframes, container, false)
-    }
-
-    private fun updateUi(binding: FragmentKeyframesBinding, target: View) {
-
-                val loc = intArrayOf(0,1)
-                target.getLocationOnScreen(loc)
-                binding.info.text = "(x,y) = (${target.x}, ${target.y})\n" +
-                        "(width, height) = (${target.width}, ${target.height})\n"+
-                        "(pivotX, pivotY) = (${target.pivotX}, ${target.pivotY})}\n" +
-                        "location: ${loc[0]}, ${loc[1]}"
     }
 
     companion object {
