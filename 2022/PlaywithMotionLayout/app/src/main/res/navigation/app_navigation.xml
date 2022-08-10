@@ -10,6 +10,5 @@
     <fragment android:id="@+id/page_simple_motion" android:name="com.codewithmehdi.playwithmotionlayout.SimpleMotionFragment"/>
     <fragment android:id="@+id/page_carousel_motion" android:name="com.codewithmehdi.playwithmotionlayout.CarouselMotionFragment"/>
     <fragment android:id="@+id/page_coordinatorlayout_motion" android:name="com.codewithmehdi.playwithmotionlayout.CoordinatorLayoutMotionFragment" />
-    <fragment android:id="@+id/page_keyframes" android:name="com.codewithmehdi.playwithmotionlayout.KeyframesFragment"/>
 
 </navigation>

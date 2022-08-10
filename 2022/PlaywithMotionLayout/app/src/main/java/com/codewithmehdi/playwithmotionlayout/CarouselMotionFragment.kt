@@ -43,61 +43,6 @@ class CarouselMotionFragment : Fragment() {
 
         binding = FragmentCarouselMotionBinding.inflate(layoutInflater, container, false)
 
-
-        var colors = intArrayOf(
-            Color.parseColor("#ffd54f"),
-            Color.parseColor("#ffca28"),
-            Color.parseColor("#ffc107"),
-            Color.parseColor("#ffb300"),
-            Color.parseColor("#ffa000"),
-            Color.parseColor("#ff8f00"),
-            Color.parseColor("#ff6f00"),
-            Color.parseColor("#c43e00")
-        )
-
-        val views = listOf(
-            binding.widgetA,
-            binding.widgetB,
-            binding.widgetC,
-            binding.widgetD,
-            binding.widgetE
-        )
-
-        val images = listOf(
-            R.drawable.woman,
-            R.drawable.man,
-            R.drawable.tiger,
-            R.drawable.bird,
-            R.drawable.trashcan,
-            R.drawable.garden,
-            R.drawable.smartphone,
-            R.drawable.phone,
-            R.drawable.watermelon,
-            R.drawable.profile,
-            R.drawable.add,
-            R.drawable.ic_shopping_cart
-
-        )
-
-        binding.apply{
-
-            carousel.setAdapter(object: Carousel.Adapter{
-                override fun count(): Int {
-                    return images.size
-                }
-
-                override fun populate(view: View?, index: Int) {
-                    if (view is ImageView)
-                        view.setImageResource(images[index])
-                }
-
-                override fun onNewItem(index: Int) {
-
-                }
-
-            })
-        }
-
         // Inflate the layout for this fragment
 //        return inflater.inflate(R.layout.fragment_carousel_motion, container, false)
         return binding.root

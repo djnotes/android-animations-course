@@ -48,10 +48,6 @@ class HomeFragment : Fragment() {
             navController.navigate(R.id.page_simple_motion)
         }
 
-        binding.keyframes.setOnClickListener {
-            navController.navigate(R.id.page_keyframes)
-        }
-
         binding.makeComplexMotions.setOnClickListener {
             navController.navigate(R.id.page_complex_motions)
         }

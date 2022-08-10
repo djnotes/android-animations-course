@@ -20,8 +20,8 @@
         android:id="@+id/homeTitle"
         android:layout_margin="@dimen/default_margin"
         android:padding="@dimen/default_margin"
-        android:text="My MotionLayout Demos"
-        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+        android:text="@string/my_motionlayout_demos"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline3"
         />
 
         <Button
@@ -29,27 +29,17 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/default_margin"
             android:padding="@dimen/default_padding"
-            android:text="Simple Motion"
+            android:text="@string/simple_motion"
             android:id="@+id/make_simple_motion"
             />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/default_margin"
-            android:padding="@dimen/default_padding"
-            android:text="Keyframes"
-            android:id="@+id/keyframes"
-            />
-
-
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/default_margin"
             android:padding="@dimen/default_padding"
-            android:text="Make Complex Motions"
+            android:text="@string/make_complex_motions"
             android:id="@+id/make_complex_motions"
             />
 
@@ -58,7 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/default_margin"
             android:padding="@dimen/default_padding"
-            android:text="Make Carousel Motion"
+            android:text="@string/make_carousel_motion"
             android:id="@+id/make_carousel_motion"
             />
 
@@ -69,7 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/default_margin"
         android:padding="@dimen/default_padding"
-        android:text="Make CoordinatorLayout Motion" />
+        android:text="@string/make_coordinatorlayout_motion" />
 
 
 </LinearLayout>
