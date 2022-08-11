@@ -43,15 +43,6 @@
             android:id="@+id/make_complex_motions"
             />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/default_margin"
-            android:padding="@dimen/default_padding"
-            android:text="@string/make_carousel_motion"
-            android:id="@+id/make_carousel_motion"
-            />
-
 
     <Button
         android:id="@+id/make_coordinator_motion"
@@ -61,9 +52,17 @@
         android:padding="@dimen/default_padding"
         android:text="@string/make_coordinatorlayout_motion" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_margin"
+        android:padding="@dimen/default_padding"
+        android:text="@string/make_carousel_motion"
+        android:id="@+id/make_carousel_motion"
+        />
 
 </LinearLayout>
 
 
-    </ScrollView>
+</ScrollView>
 
