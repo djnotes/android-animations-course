@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    app:layoutDescription="@xml/fragment_complex_motion_scene"
     tools:context=".ComplexMotionFragment">
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -34,16 +35,16 @@
             android:id="@+id/note"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/new_note"
             android:layout_marginEnd="@dimen/default_margin"
             android:layout_marginBottom="@dimen/default_margin"
+            android:text="@string/new_note"
             app:icon="@drawable/ic_note"
             app:layout_constraintBottom_toTopOf="@id/audio"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/audio" />
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/rocket"
             android:layout_width="@dimen/image_size"
             android:layout_height="@dimen/image_size"
             android:layout_marginStart="32dp"
@@ -52,4 +53,4 @@
             app:layout_constraintStart_toStartOf="parent" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.motion.widget.MotionLayout>

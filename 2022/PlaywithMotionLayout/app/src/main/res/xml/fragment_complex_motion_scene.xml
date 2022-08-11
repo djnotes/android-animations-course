@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="500">
+       <KeyFrameSet>
+           <KeyPosition
+               motion:motionTarget="@+id/rocket"
+               motion:framePosition="20"
+               motion:keyPositionType="parentRelative"
+               motion:percentX="0.8"
+               motion:percentY="0.7" />
+           <KeyAttribute
+               motion:motionTarget="@+id/rocket"
+               motion:framePosition="19"
+               android:rotation="-45" />
+           <KeyPosition
+               motion:motionTarget="@+id/rocket"
+               motion:framePosition="71"
+               motion:keyPositionType="parentRelative"
+               motion:percentX="0.2"
+               motion:percentY="0.2" />
+           <KeyAttribute
+               motion:motionTarget="@+id/rocket"
+               motion:framePosition="70"
+               android:rotation="45" />
+       </KeyFrameSet>
+        <OnClick motion:targetId="@+id/fab"  motion:clickAction="toggle"/>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:layout_marginBottom="@dimen/default_margin"
+            android:contentDescription="@string/add_new_item"
+
+            android:src="@drawable/add"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:rotation="0"
+            android:scaleX="1"
+            android:scaleY="1" />
+
+        <Constraint
+            android:id="@+id/audio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/default_margin"
+            android:layout_marginBottom="@dimen/default_margin"
+            android:text="@string/new_recording"
+            motion:icon="@drawable/ic_audiotrack"
+            motion:layout_constraintBottom_toTopOf="@id/fab"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="@+id/fab"
+            android:visibility="gone" />
+
+        <Constraint
+            android:id="@+id/note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:layout_marginBottom="@dimen/default_margin"
+            android:text="@string/new_note"
+            motion:icon="@drawable/ic_note"
+            motion:layout_constraintBottom_toTopOf="@id/audio"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="@+id/audio"
+            android:visibility="gone" />
+
+        <Constraint
+            android:id="@+id/rocket"
+            android:layout_width="@dimen/image_size"
+            android:layout_height="@dimen/image_size"
+            android:layout_marginStart="32dp"
+            android:src="@drawable/rocket"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:visibility="visible" />
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:layout_marginBottom="@dimen/default_margin"
+            android:contentDescription="@string/add_new_item"
+
+            android:src="@drawable/add"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:rotation="45"
+            android:scaleX="1.2"
+            android:scaleY="1.2" />
+
+        <Constraint
+            android:id="@+id/audio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/default_margin"
+            android:layout_marginBottom="@dimen/default_margin"
+            android:text="@string/new_recording"
+            motion:icon="@drawable/ic_audiotrack"
+            motion:layout_constraintBottom_toTopOf="@id/fab"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="@+id/fab" />
+
+        <Constraint
+            android:id="@+id/note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:layout_marginBottom="@dimen/default_margin"
+            android:text="@string/new_note"
+            motion:icon="@drawable/ic_note"
+            motion:layout_constraintBottom_toTopOf="@id/audio"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="@+id/audio" />
+
+        <Constraint
+            android:id="@+id/rocket"
+            android:layout_width="@dimen/image_size"
+            android:layout_height="@dimen/image_size"
+            android:src="@drawable/rocket"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:visibility="visible" />
+
+    </ConstraintSet>
+</MotionScene>
