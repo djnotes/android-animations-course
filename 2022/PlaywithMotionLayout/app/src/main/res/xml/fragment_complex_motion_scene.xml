@@ -46,7 +46,8 @@
             motion:layout_constraintEnd_toEndOf="parent"
             android:rotation="0"
             android:scaleX="1"
-            android:scaleY="1" />
+            android:scaleY="1"
+            android:layout_marginTop="@dimen/default_margin" />
 
         <Constraint
             android:id="@+id/audio"
@@ -100,7 +101,8 @@
             motion:layout_constraintEnd_toEndOf="parent"
             android:rotation="45"
             android:scaleX="1.2"
-            android:scaleY="1.2" />
+            android:scaleY="1.2"
+            android:layout_marginTop="@dimen/default_margin" />
 
         <Constraint
             android:id="@+id/audio"
@@ -111,8 +113,7 @@
             android:text="@string/new_recording"
             motion:icon="@drawable/ic_audiotrack"
             motion:layout_constraintBottom_toTopOf="@id/fab"
-            motion:layout_constraintEnd_toEndOf="parent"
-            motion:layout_constraintStart_toStartOf="@+id/fab" />
+            motion:layout_constraintEnd_toEndOf="@id/fab" />
 
         <Constraint
             android:id="@+id/note"
@@ -123,8 +124,7 @@
             android:text="@string/new_note"
             motion:icon="@drawable/ic_note"
             motion:layout_constraintBottom_toTopOf="@id/audio"
-            motion:layout_constraintEnd_toEndOf="parent"
-            motion:layout_constraintStart_toStartOf="@+id/audio" />
+            motion:layout_constraintEnd_toEndOf="@id/audio" />
 
         <Constraint
             android:id="@+id/rocket"

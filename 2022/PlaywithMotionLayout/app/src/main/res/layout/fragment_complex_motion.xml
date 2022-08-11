@@ -11,10 +11,9 @@
             android:id="@+id/fab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/default_margin"
-            android:layout_marginBottom="@dimen/default_margin"
-            android:contentDescription="@string/add_new_item"
+            android:layout_margin="@dimen/default_margin"
 
+            android:contentDescription="@string/add_new_item"
             android:src="@drawable/add"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
@@ -23,25 +22,21 @@
             android:id="@+id/audio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="@dimen/default_margin"
-            android:layout_marginBottom="@dimen/default_margin"
+            android:layout_margin="@dimen/default_margin"
             android:text="@string/new_recording"
             app:icon="@drawable/ic_audiotrack"
             app:layout_constraintBottom_toTopOf="@id/fab"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/fab" />
+            app:layout_constraintEnd_toEndOf="@id/fab" />
 
         <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
             android:id="@+id/note"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/default_margin"
-            android:layout_marginBottom="@dimen/default_margin"
+            android:layout_margin="@dimen/default_margin"
             android:text="@string/new_note"
             app:icon="@drawable/ic_note"
             app:layout_constraintBottom_toTopOf="@id/audio"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/audio" />
+            app:layout_constraintEnd_toEndOf="@id/audio" />
 
         <ImageView
             android:id="@+id/rocket"
