@@ -12,4 +12,6 @@
     <string name="make_complex_motions">Make Complex Motions</string>
     <string name="make_carousel_motion">Make Carousel Motion</string>
     <string name="make_coordinatorlayout_motion">Make CoordinatorLayout Motion</string>
+    <string name="mr_developer">Mr Developer</string>
+    <string name="miss_developer">Miss Developer</string>
 </resources>
