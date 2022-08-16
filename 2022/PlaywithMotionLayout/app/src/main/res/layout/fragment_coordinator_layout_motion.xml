@@ -10,25 +10,26 @@
         android:layout_height="180dp"
         android:fitsSystemWindows="false">
 
-        <androidx.constraintlayout.motion.widget.MotionLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/motion_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fitsSystemWindows="false"
             android:minHeight="80dp"
-            motion:layoutDescription="@xml/fragment_coordinator_layout_motion_xml_motion_layout_scene"
-            motion:layout_scrollFlags="scroll|enterAlways|snap|exitUntilCollapsed">
+            motion:layout_scrollFlags="scroll|enterAlways|snap|exitUntilCollapsed"
+            >
 
             <ImageView
-                android:id="@+id/background"
                 android:layout_width="0dp"
                 android:layout_height="1000dp"
+                android:id="@+id/background"
                 android:scaleType="centerCrop"
                 android:src="@drawable/summer"
-                motion:layout_constraintBottom_toBottomOf="parent"
-                motion:layout_constraintEnd_toEndOf="parent"
                 motion:layout_constraintStart_toStartOf="parent"
-                motion:layout_constraintTop_toTopOf="parent" />
+                motion:layout_constraintEnd_toEndOf="parent"
+                motion:layout_constraintTop_toTopOf="parent"
+                motion:layout_constraintBottom_toBottomOf="parent"
+                />
 
             <androidx.constraintlayout.utils.widget.ImageFilterView
                 android:id="@+id/profile"
@@ -45,17 +46,19 @@
 
             <TextView
                 android:id="@+id/name"
+                android:text="@string/mr_developer"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/default_padding"
-                android:text="@string/mr_developer"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
-                motion:layout_constraintEnd_toEndOf="parent"
+                motion:layout_constraintTop_toBottomOf="@id/profile"
                 motion:layout_constraintStart_toStartOf="parent"
-                motion:layout_constraintTop_toBottomOf="@id/profile" />
+                motion:layout_constraintEnd_toEndOf="parent"
+                />
 
 
-        </androidx.constraintlayout.motion.widget.MotionLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.core.widget.NestedScrollView
