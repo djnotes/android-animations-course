@@ -28,6 +28,18 @@ class CarouselMotionFragment : Fragment() {
     private var param2: String? = null
     private lateinit var binding: FragmentCarouselMotionBinding
 
+    private val images = listOf(
+        R.drawable.man,
+        R.drawable.woman,
+        R.drawable.night,
+        R.drawable.landscape,
+        R.drawable.flower,
+        R.drawable.garden,
+        R.drawable.phone,
+        R.drawable.icecream,
+        R.drawable.strawberry,
+    )
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -42,6 +54,8 @@ class CarouselMotionFragment : Fragment() {
     ): View? {
 
         binding = FragmentCarouselMotionBinding.inflate(layoutInflater, container, false)
+
+
 
         // Inflate the layout for this fragment
 //        return inflater.inflate(R.layout.fragment_carousel_motion, container, false)

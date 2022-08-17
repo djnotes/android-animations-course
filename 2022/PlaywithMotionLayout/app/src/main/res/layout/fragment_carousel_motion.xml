@@ -2,87 +2,78 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/motion_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CarouselMotionFragment"
-    android:id="@+id/motion_layout"
-    >
-
+    tools:context=".CarouselMotionFragment">
 
 
     <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/guideline1"
-        app:layout_constraintGuide_percent="0.25"
         android:orientation="vertical"
-        />
+        app:layout_constraintGuide_percent="0.25" />
 
 
     <ImageView
+        android:id="@+id/widgetC"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:scaleType="fitCenter"
-        android:id="@+id/widgetC"
         android:src="@drawable/woman"
-        app:layout_constraintStart_toEndOf="@id/guideline1"
-        app:layout_constraintEnd_toStartOf="@id/guideline2"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        />
+        app:layout_constraintEnd_toStartOf="@id/guideline2"
+        app:layout_constraintStart_toEndOf="@id/guideline1"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/guideline2"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.75"
-        />
+        app:layout_constraintGuide_percent="0.75" />
 
 
     <ImageView
+        android:id="@+id/widgetD"
         android:layout_width="@dimen/image_size"
         android:layout_height="@dimen/image_size"
-        android:id="@+id/widgetD"
         android:src="@drawable/man"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/guideline2"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
 
         />
 
 
     <ImageView
+        android:id="@+id/widgetE"
         android:layout_width="@dimen/image_size"
         android:layout_height="@dimen/image_size"
-        android:id="@+id/widgetE"
         android:src="@drawable/phone"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/widgetD"
-        />
-
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <ImageView
+        android:id="@+id/widgetB"
         android:layout_width="@dimen/image_size"
         android:layout_height="@dimen/image_size"
-        android:id="@+id/widgetB"
         android:src="@drawable/landscape"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/widgetC"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
+        android:id="@+id/widgetA"
         android:layout_width="@dimen/image_size"
         android:layout_height="@dimen/image_size"
-        android:id="@+id/widgetA"
         android:src="@drawable/tiger"
-        app:layout_constraintEnd_toStartOf="@id/widgetB"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        />
+        app:layout_constraintEnd_toStartOf="@id/widgetB"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 
