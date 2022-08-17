@@ -5,32 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CarouselMotionFragment"
-    app:motionDebug="SHOW_ALL"
     android:id="@+id/motion_layout"
-    app:showPaths="true"
     >
 
-    <ImageView
-        android:layout_width="@dimen/image_size"
-        android:layout_height="@dimen/image_size"
-        android:id="@+id/widgetA"
-        android:src="@drawable/tiger"
-        app:layout_constraintEnd_toStartOf="@id/widgetB"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        />
 
-
-    <ImageView
-        android:layout_width="@dimen/image_size"
-        android:layout_height="@dimen/image_size"
-        android:id="@+id/widgetB"
-        android:src="@drawable/bird"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/guideline1"
-        app:layout_constraintStart_toEndOf="@id/widgetA"
-        />
 
     <androidx.constraintlayout.widget.Guideline
         android:layout_width="wrap_content"
@@ -46,7 +24,7 @@
         android:layout_height="0dp"
         android:scaleType="fitCenter"
         android:id="@+id/widgetC"
-        android:src="@drawable/garden"
+        android:src="@drawable/woman"
         app:layout_constraintStart_toEndOf="@id/guideline1"
         app:layout_constraintEnd_toStartOf="@id/guideline2"
         app:layout_constraintTop_toTopOf="parent"
@@ -76,7 +54,7 @@
 
     <ImageView
         android:layout_width="@dimen/image_size"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/image_size"
         android:id="@+id/widgetE"
         android:src="@drawable/phone"
         app:layout_constraintTop_toTopOf="parent"
@@ -86,6 +64,25 @@
 
 
 
+    <ImageView
+        android:layout_width="@dimen/image_size"
+        android:layout_height="@dimen/image_size"
+        android:id="@+id/widgetB"
+        android:src="@drawable/landscape"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/widgetC"
+        />
+
+    <ImageView
+        android:layout_width="@dimen/image_size"
+        android:layout_height="@dimen/image_size"
+        android:id="@+id/widgetA"
+        android:src="@drawable/tiger"
+        app:layout_constraintEnd_toStartOf="@id/widgetB"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
 
 
 
