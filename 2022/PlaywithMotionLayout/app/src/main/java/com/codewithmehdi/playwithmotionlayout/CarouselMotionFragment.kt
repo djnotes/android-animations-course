@@ -57,6 +57,21 @@ class CarouselMotionFragment : Fragment() {
 
 
 
+        binding.apply{
+            carousel.setAdapter(object:Carousel.Adapter{
+                override fun count(): Int {
+                    return images.size
+                }
+
+                override fun populate(view: View?, index: Int) {
+                    (view as ImageView).setImageResource(images[index])
+                }
+
+                override fun onNewItem(index: Int) {
+                }
+
+            })
+        }
         // Inflate the layout for this fragment
 //        return inflater.inflate(R.layout.fragment_carousel_motion, container, false)
         return binding.root

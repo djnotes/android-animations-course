@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/widgetC"
+            motion:layout_constraintStart_toEndOf="@id/guideline1"
+            motion:layout_constraintEnd_toStartOf="@id/guideline2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/widgetD"
+            motion:layout_constraintStart_toEndOf="@id/guideline2"
+            android:layout_width="@dimen/image_size"
+            android:layout_height="@dimen/image_size"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/widgetE"
+            motion:layout_constraintStart_toEndOf="@id/widgetD"
+            android:layout_width="@dimen/image_size"
+            android:layout_height="@dimen/image_size"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/widgetB"
+            motion:layout_constraintEnd_toStartOf="@id/widgetC"
+            android:layout_width="@dimen/image_size"
+            android:layout_height="@dimen/image_size"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/widgetA"
+            motion:layout_constraintEnd_toStartOf="@id/widgetB"
+            android:layout_width="@dimen/image_size"
+            android:layout_height="@dimen/image_size"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/next">
+
+        <Constraint
+            android:id="@+id/widgetD"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            motion:layout_constraintStart_toEndOf="@id/guideline1"
+            motion:layout_constraintEnd_toStartOf="@id/guideline2"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/widgetE"
+            motion:layout_constraintStart_toEndOf="@id/widgetD"
+            android:layout_width="@dimen/image_size"
+            android:layout_height="@dimen/image_size"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/widgetC"
+            motion:layout_constraintEnd_toStartOf="@id/widgetD"
+            android:layout_width="@dimen/image_size"
+            android:layout_height="@dimen/image_size"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/widgetB"
+            motion:layout_constraintEnd_toStartOf="@id/widgetC"
+            android:layout_width="@dimen/image_size"
+            android:layout_height="@dimen/image_size"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/widgetA"
+            motion:layout_constraintEnd_toStartOf="@id/widgetB"
+            android:layout_width="@dimen/image_size"
+            android:layout_height="@dimen/image_size"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/previous">
+
+        <Constraint
+            android:id="@+id/widgetB"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            motion:layout_constraintStart_toEndOf="@id/guideline1"
+            motion:layout_constraintEnd_toStartOf="@id/guideline2"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+
+        <Constraint
+            android:id="@+id/widgetC"
+            motion:layout_constraintStart_toEndOf="@id/widgetB"
+            android:layout_width="@dimen/image_size"
+            android:layout_height="@dimen/image_size"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/widgetD"
+            android:layout_width="@dimen/image_size"
+            android:layout_height="@dimen/image_size"
+            motion:layout_constraintStart_toEndOf="@id/widgetC"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/widgetE"
+            motion:layout_constraintStart_toEndOf="@id/widgetD"
+            android:layout_width="@dimen/image_size"
+            android:layout_height="@dimen/image_size"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+        <Constraint
+            android:id="@+id/widgetA"
+            motion:layout_constraintEnd_toStartOf="@id/widgetB"
+            android:layout_width="@dimen/image_size"
+            android:layout_height="@dimen/image_size"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+    </ConstraintSet>
+
+    <Transition
+        android:id="@+id/backward"
+        motion:constraintSetStart="@+id/start"
+        motion:constraintSetEnd="@+id/previous">
+        <OnSwipe
+            motion:dragDirection="dragRight"
+            motion:touchAnchorSide="right"
+            />
+    </Transition>
+
+    <Transition
+        android:id="@+id/forward"
+        motion:constraintSetStart="@+id/start"
+        motion:constraintSetEnd="@+id/next">
+        <OnSwipe motion:touchAnchorSide="left"
+            motion:dragDirection="dragLeft"
+            />
+        <KeyFrameSet>
+            <KeyCycle
+                android:rotation="30"
+                motion:waveOffset="0"
+                motion:waveShape="sin"
+                motion:wavePeriod="1"
+                motion:framePosition="50"
+                motion:motionTarget="@id/widgetC"
+                />
+        </KeyFrameSet>
+    </Transition>
+</MotionScene>
