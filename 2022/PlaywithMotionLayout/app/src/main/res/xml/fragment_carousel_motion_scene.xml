@@ -19,6 +19,7 @@
             motion:layout_constraintStart_toEndOf="@id/guideline2"
             android:layout_width="@dimen/image_size"
             android:layout_height="@dimen/image_size"
+            android:rotationY="-30"
             motion:layout_constraintBottom_toBottomOf="parent"
             motion:layout_constraintTop_toTopOf="parent" />
         <Constraint
@@ -33,6 +34,7 @@
             motion:layout_constraintEnd_toStartOf="@id/widgetC"
             android:layout_width="@dimen/image_size"
             android:layout_height="@dimen/image_size"
+            android:rotationY="30"
             motion:layout_constraintBottom_toBottomOf="parent"
             motion:layout_constraintTop_toTopOf="parent" />
         <Constraint
@@ -59,6 +61,7 @@
             motion:layout_constraintStart_toEndOf="@id/widgetD"
             android:layout_width="@dimen/image_size"
             android:layout_height="@dimen/image_size"
+            android:rotationY="-30"
             motion:layout_constraintBottom_toBottomOf="parent"
             motion:layout_constraintTop_toTopOf="parent" />
 
@@ -67,6 +70,7 @@
             motion:layout_constraintEnd_toStartOf="@id/widgetD"
             android:layout_width="@dimen/image_size"
             android:layout_height="@dimen/image_size"
+            android:rotationY="30"
             motion:layout_constraintBottom_toBottomOf="parent"
             motion:layout_constraintTop_toTopOf="parent" />
 
@@ -104,6 +108,7 @@
             motion:layout_constraintStart_toEndOf="@id/widgetB"
             android:layout_width="@dimen/image_size"
             android:layout_height="@dimen/image_size"
+            android:rotationY="-30"
             motion:layout_constraintBottom_toBottomOf="parent"
             motion:layout_constraintTop_toTopOf="parent" />
 
@@ -131,6 +136,7 @@
             motion:layout_constraintEnd_toStartOf="@id/widgetB"
             android:layout_width="@dimen/image_size"
             android:layout_height="@dimen/image_size"
+            android:rotationY="30"
             motion:layout_constraintBottom_toBottomOf="parent"
             motion:layout_constraintTop_toTopOf="parent" />
 
