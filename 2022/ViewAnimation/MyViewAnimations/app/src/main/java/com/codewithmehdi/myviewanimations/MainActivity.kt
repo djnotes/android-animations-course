@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.animation.AlphaAnimation
 import android.view.animation.AnimationSet
+import android.view.animation.AnimationUtils
 import android.view.animation.AnticipateOvershootInterpolator
 import android.view.animation.ScaleAnimation
 import android.view.animation.TranslateAnimation
@@ -35,8 +36,12 @@ class MainActivity : AppCompatActivity() {
             interpolator = AnticipateOvershootInterpolator()
         }
 
+        val loadedAnim  = AnimationUtils.loadAnimation(this, R.anim.my_animation)
+        loadedAnim.duration = 2000
+
         binding.startShow.setOnClickListener {
             binding.welcome.startAnimation(animationSet)
+            binding.art.startAnimation(loadedAnim)
         }
     }
 }
