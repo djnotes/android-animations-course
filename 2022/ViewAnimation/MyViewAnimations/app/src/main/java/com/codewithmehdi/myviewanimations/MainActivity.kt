@@ -1,5 +1,6 @@
 package com.codewithmehdi.myviewanimations
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.animation.AlphaAnimation
@@ -43,5 +44,14 @@ class MainActivity : AppCompatActivity() {
             binding.welcome.startAnimation(animationSet)
             binding.art.startAnimation(loadedAnim)
         }
+
+        binding.startSecond.setOnClickListener {
+            startActivity(
+                Intent(this, SecondActivity::class.java)
+            )
+
+            overridePendingTransition(R.anim.slide_right_in, R.anim.slide_left_out)
+        }
+
     }
 }
