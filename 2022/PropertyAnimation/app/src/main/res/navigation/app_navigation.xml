@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/homeFragment">
+
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.codewithmehdi.mypropertyanimation.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_valueAnimatorFragment"
+            app:destination="@id/valueAnimatorFragment"
+            />
+        <action
+            android:id="@+id/action_homeFragment_to_viewPropertyAnimatorFragment"
+            app:destination="@id/viewPropertyAnimatorFragment"
+            />
+        <action
+            android:id="@+id/action_homeFragment_to_objectAnimatorFragment"
+            app:destination="@id/objectAnimatorFragment"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/valueAnimatorFragment"
+        android:name="com.codewithmehdi.mypropertyanimation.ValueAnimatorFragment"
+        android:label="fragment_value_animator"
+        tools:layout="@layout/fragment_value_animator" />
+    <fragment
+        android:id="@+id/objectAnimatorFragment"
+        android:name="com.codewithmehdi.mypropertyanimation.ObjectAnimatorFragment"
+        android:label="fragment_object_animator"
+        tools:layout="@layout/fragment_object_animator" />
+    <fragment
+        android:id="@+id/viewPropertyAnimatorFragment"
+        android:name="com.codewithmehdi.mypropertyanimation.ViewPropertyAnimatorFragment"
+        android:label="fragment_view_property_animator"
+        tools:layout="@layout/fragment_view_property_animator" />
+
+
+</navigation>
