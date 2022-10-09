@@ -23,6 +23,9 @@
             android:id="@+id/action_homeFragment_to_objectAnimatorFragment"
             app:destination="@id/objectAnimatorFragment"
             />
+        <action
+            android:id="@+id/action_homeFragment_to_animatorsetFragment"
+            app:destination="@id/animatorsetFragment" />
     </fragment>
     <fragment
         android:id="@+id/valueAnimatorFragment"
@@ -39,6 +42,11 @@
         android:name="com.codewithmehdi.mypropertyanimation.ViewPropertyAnimatorFragment"
         android:label="fragment_view_property_animator"
         tools:layout="@layout/fragment_view_property_animator" />
+    <fragment
+        android:id="@+id/animatorsetFragment"
+        android:name="com.codewithmehdi.mypropertyanimation.AnimatorsetFragment"
+        android:label="fragment_animatorset"
+        tools:layout="@layout/fragment_animatorset" />
 
 
 </navigation>

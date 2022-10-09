@@ -7,22 +7,22 @@
 
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout
+        android:id="@+id/topics"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/topics"
-        android:gravity="start"
         android:layout_gravity="center"
+        android:gravity="start"
         android:orientation="vertical"
 
         >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
-        android:id="@+id/title"
-        android:text="@string/list_of_property_animation_topics" />
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="@string/list_of_property_animation_topics"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4" />
 
 
         <com.google.android.material.button.MaterialButton
@@ -30,9 +30,9 @@
             android:id="@+id/value_animator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="16dp"
             android:text="@string/valueanimator"
             android:textAllCaps="false"
-            android:layout_margin="16dp"
 
             />
 
@@ -41,9 +41,9 @@
             android:id="@+id/object_animator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="16dp"
             android:text="@string/objectanimator"
             android:textAllCaps="false"
-            android:layout_margin="16dp"
 
             />
 
@@ -52,16 +52,21 @@
             android:id="@+id/view_property_animator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="16dp"
             android:text="@string/viewpropertyanimator"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/animatorSet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/animatorset"
             android:layout_margin="16dp"
             android:textAllCaps="false"
             />
 
 
-
     </LinearLayout>
-
-
 
 
 </FrameLayout>
