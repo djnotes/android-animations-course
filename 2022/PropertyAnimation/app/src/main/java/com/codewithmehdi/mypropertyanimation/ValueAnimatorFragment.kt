@@ -1,10 +1,13 @@
 package com.codewithmehdi.mypropertyanimation
 
+import android.animation.ValueAnimator
+import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.codewithmehdi.mypropertyanimation.databinding.FragmentValueAnimatorBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -34,7 +37,38 @@ class ValueAnimatorFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_value_animator, container, false)
+//        return inflater.inflate(R.layout.fragment_value_animator, container, false)
+        return FragmentValueAnimatorBinding.inflate(layoutInflater).apply{
+            animateValue.setOnClickListener {
+                ValueAnimator.ofInt(1, 200).apply {
+                    duration = 3_000
+
+                    //Add listener
+                    addUpdateListener { animator ->
+                        animateValue.text =
+                            "${animator.currentPlayTime}: ${animator.animatedValue as Int}"
+                    }
+                    start()
+                }
+            }
+
+
+            //Add click listener
+            animateView.setOnClickListener {
+                ValueAnimator.ofArgb(Color.YELLOW).apply{
+                    duration = 500
+
+                    addUpdateListener { animator->
+                        root.setBackgroundColor(animator.animatedValue as Int)
+                        root.invalidate()
+                    }
+
+                    start()
+                }
+            }
+        }
+            .root
+
     }
 
     companion object {

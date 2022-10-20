@@ -10,4 +10,7 @@
     <string name="aniamte_multiple_views">Animate Multiple Views</string>
     <string name="animatorset">AnimatorSet</string>
     <string name="animator_sets">Animator Sets</string>
+    <string name="animate_view">Animate View</string>
+    <string name="animate_value">Animate Value</string>
+    <string name="animate_custom_type">Animate Custom Type</string>
 </resources>

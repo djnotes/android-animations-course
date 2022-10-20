@@ -1,10 +1,13 @@
 package com.codewithmehdi.mypropertyanimation
 
+import android.animation.ObjectAnimator
+import android.animation.PropertyValuesHolder
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import com.codewithmehdi.mypropertyanimation.databinding.FragmentObjectAnimatorBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -34,7 +37,35 @@ class ObjectAnimatorFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_object_animator, container, false)
+//        return inflater.inflate(R.layout.fragment_object_animator, container, false)
+        return FragmentObjectAnimatorBinding.inflate(layoutInflater).apply{
+            animateView.setOnClickListener {
+                //TODO: Animate views using ObjectAnimator
+                ObjectAnimator.ofFloat(title, "rotation", 0f, 360f).apply{
+                duration = 500
+                start()
+              }
+
+                ObjectAnimator.ofFloat(title, "alpha", 0f, 1f).apply{
+                    duration = 500
+                    start()
+                }
+
+                val rotationVH = PropertyValuesHolder.ofFloat("rotation", 0f, 360f)
+                val alphaVH = PropertyValuesHolder.ofFloat("alpha", 0f, 1f)
+
+                ObjectAnimator.ofPropertyValuesHolder(plus, rotationVH, alphaVH).apply{
+                    duration = 500
+                    start()
+                }
+
+
+
+
+            }
+
+
+        }.root
     }
 
     companion object {

@@ -10,19 +10,16 @@
         android:id="@+id/homeFragment"
         android:name="com.codewithmehdi.mypropertyanimation.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" >
+        tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_homeFragment_to_valueAnimatorFragment"
-            app:destination="@id/valueAnimatorFragment"
-            />
+            app:destination="@id/valueAnimatorFragment" />
         <action
             android:id="@+id/action_homeFragment_to_viewPropertyAnimatorFragment"
-            app:destination="@id/viewPropertyAnimatorFragment"
-            />
+            app:destination="@id/viewPropertyAnimatorFragment" />
         <action
             android:id="@+id/action_homeFragment_to_objectAnimatorFragment"
-            app:destination="@id/objectAnimatorFragment"
-            />
+            app:destination="@id/objectAnimatorFragment" />
         <action
             android:id="@+id/action_homeFragment_to_animatorsetFragment"
             app:destination="@id/animatorsetFragment" />
