@@ -5,6 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.codewithmehdi.mypropertyanimation.databinding.FragmentViewPropertyAnimatorBinding
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -34,7 +38,38 @@ class ViewPropertyAnimatorFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_view_property_animator, container, false)
+        return FragmentViewPropertyAnimatorBinding.inflate(layoutInflater).apply{
+            cart.setOnClickListener {cart->
+                cart.animate()
+                    .setDuration(500)
+                    .rotationBy(-45f)
+                    .withEndAction {
+                        cart.animate()
+                            .setDuration(500)
+                            .rotationBy(90f)
+                            .withEndAction {
+                                cart.animate()
+                                    .setDuration(300)
+                                    .rotationBy(-45f)
+                                    .withEndAction{
+                                        cart.animate()
+                                            .setDuration(200)
+                                            .scaleXBy(0.2f)
+                                            .scaleYBy(0.2f)
+                                        title.text = "Animation Finished..."
+                                    }
+
+                            }
+
+                    }
+                    .withStartAction {
+                        title.text = "Animation Started..."
+                        title.invalidate()
+                    }
+                    .start()
+            }
+        }.root
+//        return inflater.inflate(R.layout.fragment_view_property_animator, container, false)
     }
 
     companion object {

@@ -40,7 +40,7 @@ class AnimatorsetFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return FragmentAnimatorsetBinding.inflate(layoutInflater).apply{
-            animateMultipleViews.setOnClickListener {
+            bigButton.setOnClickListener {
                 val  titleAnim = ObjectAnimator.ofFloat(title, "rotation", 0f, 360f)
                 val plusAnim = ObjectAnimator.ofFloat(plusImage, "scaleX", 1f, 2f)
                 val buttonAnim = ObjectAnimator.ofArgb(animateView, "backgroundColor", Color.BLUE, Color.RED)
