@@ -1,10 +1,21 @@
 package com.codewithmehdi.mypropertyanimation
 
+import android.animation.AnimatorInflater
+import android.animation.AnimatorSet
+import android.animation.ObjectAnimator
+import android.animation.TypeEvaluator
+import android.animation.ValueAnimator
+import android.graphics.Canvas
+import android.graphics.Rect
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
+import com.codewithmehdi.mypropertyanimation.databinding.FragmentCustomTypeAnimationBinding
+import com.google.android.material.animation.AnimatorSetCompat
+import kotlin.random.Random
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -36,6 +47,8 @@ class CustomTypeAnimationFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_custom_type_animation, container, false)
     }
+
+
 
     companion object {
         /**

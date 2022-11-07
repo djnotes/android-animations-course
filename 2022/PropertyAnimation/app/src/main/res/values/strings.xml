@@ -13,4 +13,6 @@
     <string name="animate_view">Animate View</string>
     <string name="animate_value">Animate Value</string>
     <string name="animate_custom_type">Animate Custom Type</string>
+    <string name="animate_custom_types">Animate Custom Types</string>
+    <string name="click_the_picture_to_animate">Click the picture to animate</string>
 </resources>
