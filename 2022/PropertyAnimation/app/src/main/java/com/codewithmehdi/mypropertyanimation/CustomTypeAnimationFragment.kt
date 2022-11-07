@@ -45,9 +45,43 @@ class CustomTypeAnimationFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_custom_type_animation, container, false)
+//        return inflater.inflate(R.layout.fragment_custom_type_animation, container, false)
+        return FragmentCustomTypeAnimationBinding.inflate(layoutInflater).apply{
+            dog.setOnClickListener {
+                ValueAnimator.ofObject(MyRectEvaluator(),
+                    Rect(dog.left, dog.top, dog.right, dog.bottom),
+                    Rect(Random.nextInt(100), Random.nextInt(200), Random.nextInt(500, 900), Random.nextInt(400, 1200))
+                ).apply{
+                    addUpdateListener {listener->
+                        val r = listener.animatedValue as Rect
+                        dog.left = r.left
+                        dog.top = r.top
+                        dog.right = r.right
+                        dog.bottom = r.bottom
+                    }
+                    duration = 2000
+                    start()
+                }
+            }
+        }.root
     }
 
+    class MyRectEvaluator: TypeEvaluator<Rect>{
+        override fun evaluate(fraction: Float, startValue: Rect?, endValue: Rect?): Rect {
+            startValue?.let{start->
+                endValue?.let{end->
+                    return Rect(
+                        (start.left + (end.left - start.left) * fraction).toInt(),
+                        (start.top + (end.top - start.top) * fraction).toInt(),
+                        (start.right + (end.right - start.right) * fraction).toInt(),
+                        (start.bottom + (end.bottom - start.bottom) * fraction).toInt()
+                    )
+                }
+            }
+            return startValue!!
+        }
+
+    }
 
 
     companion object {

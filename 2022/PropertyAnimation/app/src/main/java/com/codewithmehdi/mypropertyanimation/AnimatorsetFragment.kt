@@ -42,7 +42,7 @@ class AnimatorsetFragment : Fragment() {
         return FragmentAnimatorsetBinding.inflate(layoutInflater).apply{
             bigButton.setOnClickListener {
                 val  titleAnim = ObjectAnimator.ofFloat(title, "rotation", 0f, 360f)
-                val plusAnim = ObjectAnimator.ofFloat(plusImage, "scaleX", 1f, 2f)
+                val plusAnim = ObjectAnimator.ofFloat(dog, "scaleX", 1f, 2f)
                 val buttonAnim = ObjectAnimator.ofArgb(animateView, "backgroundColor", Color.BLUE, Color.RED)
                 AnimatorSet().apply{
 //                    playTogether(

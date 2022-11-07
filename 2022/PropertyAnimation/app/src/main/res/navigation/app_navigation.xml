@@ -26,6 +26,9 @@
         <action
             android:id="@+id/action_homeFragment_to_customTypeAnimationFragment"
             app:destination="@id/customTypeAnimation" />
+        <action
+            android:id="@+id/action_homeFragment_to_animatorResourcesFragment"
+            app:destination="@id/animatorResourcesFragment" />
     </fragment>
     <fragment
         android:id="@+id/valueAnimatorFragment"
@@ -52,6 +55,11 @@
         android:name="com.codewithmehdi.mypropertyanimation.CustomTypeAnimationFragment"
         android:label="fragment_custom_type_animation"
         tools:layout="@layout/fragment_custom_type_animation" />
+    <fragment
+        android:id="@+id/animatorResourcesFragment"
+        android:name="com.codewithmehdi.mypropertyanimation.AnimatorResourcesFragment"
+        android:label="fragment_animator_resources"
+        tools:layout="@layout/fragment_animator_resources" />
 
 
 </navigation>
