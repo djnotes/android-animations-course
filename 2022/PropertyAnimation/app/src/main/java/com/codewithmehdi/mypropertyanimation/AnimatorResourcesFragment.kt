@@ -1,10 +1,12 @@
 package com.codewithmehdi.mypropertyanimation
 
+import android.animation.AnimatorInflater
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.codewithmehdi.mypropertyanimation.databinding.FragmentAnimatorResourcesBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -34,7 +36,22 @@ class AnimatorResourcesFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_animator_resources, container, false)
+//        return inflater.inflate(R.layout.fragment_animator_resources, container, false)
+        return FragmentAnimatorResourcesBinding.inflate(layoutInflater).apply{
+            dog.setOnClickListener {
+                val dogAnimator = AnimatorInflater.loadAnimator(requireActivity(), R.animator.dog_animator)
+                dogAnimator.setTarget(dog)
+                dogAnimator.start()
+            }
+
+            hourglass.setOnClickListener {
+                val hourglassAnimator = AnimatorInflater.loadAnimator(requireActivity(), R.animator.hourglass_animator)
+                hourglassAnimator.setTarget(hourglass)
+                hourglassAnimator.start()
+            }
+
+
+        }.root
     }
 
     companion object {
